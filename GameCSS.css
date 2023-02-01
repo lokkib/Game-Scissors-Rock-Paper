@@ -1,0 +1,138 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Indie Flower', cursive;
+   background-color: coral;
+}
+
+.main-heading,
+.lobby-heading {
+   margin-top: 100px;
+   text-shadow: 1px 1px, -1px -1px 2px blue;
+   margin-top: 100px;
+   text-align: center;
+}
+
+.blockLogin {
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+
+.input-login {
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   height: 30px;
+}
+
+.input-login::placeholder {
+   color: gray;
+   font-style: italic;
+}
+
+.input-login:focus::placeholder {
+   color: transparent;
+}
+
+.button-login {
+   width: 176px;
+   border-radius: 10px;
+   background-color: purple;
+   color: white;
+   height: 30px;
+}
+
+.button-login:hover{
+   cursor: pointer;
+}
+
+.warning {
+   color: red;
+   font-weight: bold;
+   font-size: 16px;
+}
+
+
+.block-players-list {
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   transform: translate(0, -190px);
+}
+
+.button-play {
+   transform: translate(0, -520px);
+   width: 176px;
+   border-radius: 10px;
+   background-color: purple;
+   color: white;
+   height: 30px;
+}
+
+.button-play:hover{
+   cursor: pointer;
+}
+
+.block-move {
+   display: flex;
+   column-gap: 30px;
+}
+
+.block-move button {
+   width: 120px;
+   border-radius: 10px;
+   background-color: purple;
+   color: white;
+   height: 30px;
+}
+
+.heading-your-move {
+   margin-bottom: 120px;
+   text-align: center;
+   text-shadow: 1px 1px, -1px -1px 2px blue;
+}
+
+.button-go-toLobby-again {
+   width: 176px;
+   border-radius: 10px;
+   background-color: purple;
+   color: white;
+   height: 30px;
+}
+
+.button-go-toLobby-again:hover{
+   cursor: pointer;
+}
+
+.heading-win,
+.heading-lose {
+   text-shadow: 1px 1px, -1px -1px 2px blue;
+   text-align: center;
+   padding-bottom: 400px;
+}
+
+.name-of-winner {
+   transform: translate(0, -200px);
+   color: mintcream;
+   font-weight: bold;
+   font-size: 20px;
+   font-style: italic;
+   text-align: center;
+}
+
+
