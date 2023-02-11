@@ -14,7 +14,7 @@ function blockLose(container) {
       },
       onSuccess(data) {
 
-          // console.log(data);
+
           log.innerHTML = `${data['game-status'].enemy.login} победил`
       }
   })

@@ -1,11 +1,9 @@
 function blockPlayerList(container) {
-  const playersHeading = document.createElement('h3');
-  playersHeading.innerHTML = 'Игроки онлайн: ';
-  playersHeading.classList.add('players-heading');
+ 
 
   const blockWithPlayers = document.createElement('div');
+  blockWithPlayers.classList.add('block-players')
 
-  container.append(playersHeading);
   container.append(blockWithPlayers);
   let i = 0;
 
@@ -17,8 +15,13 @@ function blockPlayerList(container) {
           },
           onSuccess(data) {
               if ((data.list[i])) {
-                  const p = document.createElement('p');
-                  p.innerHTML = data.list[i].login;
+                  const p = document.createElement('div');
+                  p.classList.add('player-wrapper')
+                  const playerName = document.createElement('div');
+                  playerName.innerHTML = data.list[i].login;
+                  playerName.classList.add('player')
+                  p.append(playerName)
+                 
                   blockWithPlayers.append(p);
                   i++;
               } else {
@@ -29,7 +32,7 @@ function blockPlayerList(container) {
       })
   }
   
-  let intervalRequestLobby = setInterval(intervalReq, 1000);
+  let intervalRequestLobby = setInterval(intervalReq, 500);
 
   function stopInterval() {
       clearInterval(intervalRequestLobby);
@@ -52,6 +55,7 @@ function blockButtonPlay(container) {
               token: window.application.Mytoken
           },
           onSuccess(data) {
+            console.log(window.application.Mytoken)
               console.log(data);
               window.application.idGame = data['player-status'].game.id;
               console.log(window.application.idGame);
@@ -65,7 +69,8 @@ function blockButtonPlay(container) {
 function lobbyScreen() {
   const mainBlock = document.querySelector('.app');
   mainBlock.textContent = '';
-
+    const backgroundLobbyBlock = document.createElement('div');
+    backgroundLobbyBlock.classList.add('background-lobby-block')
   const title = document.createElement('h1');
   title.textContent = 'Лобби';
   title.classList.add('lobby-heading');
@@ -80,13 +85,24 @@ function lobbyScreen() {
   contentThird.classList.add('block-players-and-button')
   contentThird.append(contentOne, contentSecond);
 
+  const imagesWrapper = document.createElement('div');
+  imagesWrapper.classList.add('images-wrapper');
+
+  const imageRock = document.createElement('img');
+  imageRock.setAttribute('src','images/rock-lobby.png')
+  
+  const imageScissors = document.createElement('img');
+  imageScissors.setAttribute('src','images/scissors-lobby.png')
+    const imagePaper = document.createElement('img');
+    imagePaper.setAttribute('src','images/paper-lobby.png')
+    imagesWrapper.append(imageRock,imageScissors, imagePaper)
   window.application.renderBlock('blockPlayerList', contentOne);
 
   window.application.renderBlock('blockButtonPlay', contentSecond);
-
+  mainBlock.appendChild(backgroundLobbyBlock);
   mainBlock.appendChild(title);
   mainBlock.appendChild(contentThird);
-
+  mainBlock.appendChild(imagesWrapper);
 }
   
   
