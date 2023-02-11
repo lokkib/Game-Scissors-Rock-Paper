@@ -1,8 +1,28 @@
 function blockWaitingForEnemyMove(container) {
-  const title = document.createElement('h1');
-  title.textContent = 'Ожидаем ход соперника...';
+    const backgroundLobbyBlock = document.createElement('div');
+    backgroundLobbyBlock.classList.add('background-lobby-block');
 
-  container.append(title);
+    const waitingMoveEnemyWrapper = document.createElement('div');
+    waitingMoveEnemyWrapper.classList.add('waiting-enemy-wrapper')
+
+    const timeImage = document.createElement('img');
+    timeImage.setAttribute('src','images/time-icon.png')
+    timeImage.classList.add('time-image');
+
+
+    const title = document.createElement('h2');
+    title.classList.add('title-loading-enemy')
+    title.textContent = 'Ожидаем ход соперника';
+
+    const titleSpan = document.createElement('span');
+    titleSpan.textContent = '...'
+    titleSpan.classList.add('title-loading-enemy-span')
+title.append(titleSpan)
+
+
+
+    waitingMoveEnemyWrapper.append(timeImage, title)
+    container.append(backgroundLobbyBlock, waitingMoveEnemyWrapper);
 }
 
 
