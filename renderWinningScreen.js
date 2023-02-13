@@ -1,9 +1,13 @@
 function blockCongratulationVictory(container) {
+  const backgroundLobbyBlock = document.createElement('div');
+  backgroundLobbyBlock.classList.add('background-lobby-block')
+  const imageWin = document.createElement('img')
+  imageWin.setAttribute('src','images/winning-image.png')
   const victoryHeading = document.createElement('h1');
   victoryHeading.innerHTML = 'Вы выиграли!';
   victoryHeading.classList.add('heading-win');
 
-  container.append(victoryHeading);
+  container.append(backgroundLobbyBlock, imageWin, victoryHeading);
 }
 
 
@@ -12,7 +16,7 @@ function winScreen() {
   mainBlock.textContent = '';
 
   const contentFirst = document.createElement('div');
-  contentFirst.classList.add('blockVictoryHeading');
+  contentFirst.classList.add('block-victory-heading');
 
   const contentSecond = document.createElement('div');
   contentSecond.classList.add('block-play-again');

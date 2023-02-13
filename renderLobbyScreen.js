@@ -55,10 +55,9 @@ function blockButtonPlay(container) {
               token: window.application.Mytoken
           },
           onSuccess(data) {
-            console.log(window.application.Mytoken)
-              console.log(data);
+           
               window.application.idGame = data['player-status'].game.id;
-              console.log(window.application.idGame);
+             
               window.application.renderScreen('waitingForStartScreen')();
           }
       })

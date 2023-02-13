@@ -12,7 +12,7 @@ function blockWaitingForStart(container) {
                 id: window.application.idGame,
             },
             onSuccess(data) {
-                console.log(data)
+             
                 if ((data['game-status'].status !== 'waiting-for-start')) {
                     stopIntervalSecondPlayer();
                     window.application.renderScreen('moveScreen')();

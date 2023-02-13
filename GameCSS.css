@@ -210,6 +210,11 @@ animation: 3s show ease;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    
+}
+
+.move-wrapper button {
+  cursor: pointer;
 }
 
 .player-wrapper {
@@ -279,6 +284,13 @@ text-align: center;
   width: 120px;
 }
 
+.block-victory-heading, .block-lose-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 .block-move button {
   width: 154px;
   height: 46px;
@@ -322,12 +334,28 @@ line-height: 33px;
   animation: 3s show ease;
 }
 
+.block-play-again {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .button-go-toLobby-again {
-  width: 176px;
-  border-radius: 10px;
-  background-color: purple;
-  color: white;
-  height: 30px;
+  font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+      width: 278px;
+      height: 46px;
+      left: 0px;
+      top: 193px;
+      border: none;
+
+      border-radius: 6px;
+      color: white;
+      transition: transform .2s;
+      cursor: pointer;
+background: #580EA2;
+animation: 3s show ease;
 }
 
 .button-go-toLobby-again:hover {
@@ -347,12 +375,11 @@ animation: 3s show ease;
 .heading-lose {
   text-shadow: 1px 1px, -1px -1px 2px blue;
   text-align: center;
-  padding-bottom: 400px;
+
 }
 
 .name-of-winner {
-  transform: translate(0, -200px);
-  color: mintcream;
+  color: black;
   font-weight: bold;
   font-size: 20px;
   font-style: italic;
