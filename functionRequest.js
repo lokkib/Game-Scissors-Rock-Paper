@@ -20,14 +20,14 @@ function request({
 
     req.onload = function() {
         if(req.status !== 200) {
-            console.log(req.statusText);
+        
             return;
         }
         onSuccess(req.response);
     }
 
     req.onerror = function() {
-        console.log('Ошибка при выполнении запроса');
+  
         return;
     }
 

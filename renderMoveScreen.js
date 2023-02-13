@@ -59,7 +59,7 @@ function moveScreen() {
       id: window.application.idGame,
     },
     onSuccess(data) {
-      console.log(data);
+     
       if (data['game-status'].enemy.login) {
         enemyMessage = document.createElement('p');
         enemyMessage.textContent = `Вы против ${data['game-status'].enemy.login}`;
@@ -85,7 +85,7 @@ function moveScreen() {
                 move: 'paper',
               },
               onSuccess(data) {
-                console.log(data);
+               
 
                 window.application.renderScreen('waitingForEnemyMoveScreen')();
               },
@@ -103,8 +103,7 @@ function moveScreen() {
                 move: 'scissors',
               },
               onSuccess(data) {
-                console.log(data);
-
+            
                 window.application.renderScreen('waitingForEnemyMoveScreen')();
               },
             });
@@ -122,7 +121,7 @@ function moveScreen() {
                 move: 'rock',
               },
               onSuccess(data) {
-                console.log(data);
+        
 
                 window.application.renderScreen('waitingForEnemyMoveScreen')();
               },

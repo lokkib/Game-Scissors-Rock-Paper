@@ -41,7 +41,7 @@ function blockAuthorization(container) {
   const warning = document.createElement('p');
   warning.classList.add('warning');
 
-  console.log('click');
+
 
   container.append(inputLabel, inputLogin, buttonLogin, warning);
 
