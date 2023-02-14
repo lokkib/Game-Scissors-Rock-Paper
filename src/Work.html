@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камень, ножницы, бумага</title>
+    <script src="https://kit.fontawesome.com/16af29596c.js" crossorigin="anonymous"></script>
+    <script src="./scripts/renderLoginScreen.js"></script>
+    <script src="./scripts/renderLobbyScreen.js"></script>
+    <script src="./scripts/renderWaitingForStartScreen.js"></script>
+    <script src="./scripts/renderMoveScreen.js"></script>
+    <script src="./scripts/renderWaitingForEnemyMoveScreen.js"></script>
+    <script src="./scripts/renderWinningScreen.js"></script>
+    <script src="./scripts/renderLoseScreen.js"></script>
+    <script src="./scripts/functionGoToLobby.js"></script>
+    <link rel="stylesheet" href="./GameCSS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
+</head>
+
+<body>
+    <div class="app"></div>
+
+    <script>
+        window.application = {
+            blocks: {
+                blockAuthorization,
+                blockPlayerList,
+                blockButtonPlay,
+                blockWaitingForStart,
+                blockMove,
+                blockWaitingForEnemyMove,
+                blockCongratulationVictory,
+                blockGoToLobby,
+                blockLose
+            },
+
+            screens: {
+                loginScreen,
+                lobbyScreen,
+                waitingForStartScreen,
+                moveScreen,
+                waitingForEnemyMoveScreen,
+                winScreen,
+                loseScreen
+            },
+            renderScreen: function(screenName) {
+                return window.application.screens[screenName]
+
+            },
+            renderBlock: function(blockName, container) {
+                return window.application.blocks[blockName](container);
+            },
+
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            window.application.renderScreen('loginScreen')();
+        })
+    </script>
+
+    <script src="./scripts/functionRequest.js"></script>
+</body>
+</html>
