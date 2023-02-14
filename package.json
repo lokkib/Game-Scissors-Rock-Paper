@@ -1,0 +1,20 @@
+{
+  "name": "game-scissors-rock-paper",
+  "version": "1.0.0",
+  "description": "### Запуск проекта",
+  "main": "functionGoToLobby.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokkib/Game-Scissors-Rock-Paper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lokkib/Game-Scissors-Rock-Paper/issues"
+  },
+  "homepage": "https://github.com/lokkib/Game-Scissors-Rock-Paper#readme"
+}
