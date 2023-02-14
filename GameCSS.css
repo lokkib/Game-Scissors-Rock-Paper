@@ -1,0 +1,387 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes show {
+   from { opacity: 0; }
+   to { opacity: 1; }
+ }
+
+
+ @keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+  background: #e5e5e5;
+  height: 100vh;
+}
+
+.app {
+  width: 320px;
+  min-height: 568px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  animation: 3s show ease;
+}
+
+.background-block {
+  margin-bottom: 39px;
+
+}
+
+.main-heading,
+.lobby-heading {
+  margin-bottom: 30px;
+  text-shadow: 1px 1px, -1px -1px 2px blue;
+  text-align: center;
+  font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 33px;
+animation: 3s show ease;
+}
+
+.block-login {
+  width: 278px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.block-login p:first-child {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  margin-right: 180px;
+  margin-bottom: -14px;
+}
+
+.input-login {
+padding-left: 17px;
+  height: 40px;
+  width: 278px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
+}
+
+.input-login::placeholder {
+  color: gray;
+  font-style: italic;
+}
+
+.input-login:focus::placeholder {
+  color: transparent;
+}
+
+.button-login-disabled {
+   font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+   width: 278px;
+   height: 46px;
+   left: 0px;
+   top: 193px;
+   border: none;
+   background: #C4C4C4;
+   border-radius: 6px;
+   color: white;
+   transition: transform .2s;
+   cursor: pointer;
+}
+
+
+.button-login-active {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+      width: 278px;
+      height: 46px;
+      left: 0px;
+      top: 193px;
+      border: none;
+
+      border-radius: 6px;
+      color: white;
+      transition: transform .2s;
+      cursor: pointer;
+background: #580EA2;
+}
+
+.button-login-active:active {
+   background: #271A58;
+   cursor: pointer;
+}
+
+.button-login-active:hover {
+   animation: bounce 1s;
+   cursor: pointer;
+}
+
+
+.warning {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.background-lobby-block {
+   height: 55px;
+   background: #E8D4FF;
+   margin-bottom: 30px;
+   width: 320px;
+   animation: 3s show ease;
+}
+
+.block-players-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.images-wrapper {
+  animation: 3s show ease;
+}
+
+.button-play {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+      width: 278px;
+      height: 46px;
+      left: 0px;
+      top: 193px;
+      border: none;
+
+      border-radius: 6px;
+      color: white;
+      transition: transform .2s;
+      cursor: pointer;
+background: #580EA2;
+animation: 3s show ease;
+}
+
+.button-play:hover {
+  cursor: pointer;
+  animation: bounce 1s;
+}
+
+.block-move {
+  display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.move-wrapper {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.move-wrapper button {
+  cursor: pointer;
+}
+
+.player-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 278px;
+   height: 55px;
+   background: #F9EBFF;
+   border-radius: 36px;
+}
+
+.player {
+   border-radius: 36px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.images-wrapper img {
+   width: 68px;
+}
+
+.block-waiting-for-start {
+  margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    animation: 3s show ease;
+}
+
+@keyframes l {
+  to {
+    clip-path: inset(0 -1ch 0 0)
+  }
+}
+
+@keyframes l2 {
+  to {
+    clip-path: inset(0 -1ch 0 0)
+  }
+}
+
+.title-loading-enemy {
+text-align: center;
+}
+
+.title-loading-enemy-span {
+   
+  clip-path: inset(0 2ch 0 0);
+  animation: l2 1s steps(4) infinite;
+}
+
+.title-loading {
+  
+  clip-path: inset(0 2ch 0 0);
+  animation: l 1s steps(4) infinite;
+}
+
+.block-waiting-for-start h2 {
+   text-align: center;
+}
+
+.images-wrapper img:nth-child(2) {
+  height: 110px;
+  width: 120px;
+}
+
+.block-victory-heading, .block-lose-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.block-move button {
+  width: 154px;
+  height: 46px;
+  font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+  color: white;
+  border: none;
+  background: #580EA2;
+  border-radius: 6px;
+  animation: 3s show ease;
+}
+
+.block-players {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-bottom: 30px;
+   animation: 3s show ease;
+}
+
+.waiting-enemy-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.time-image {
+  margin-top: 20px;
+  width: 82px;
+}
+
+.heading-your-move {
+  font-weight: 600;
+font-size: 28px;
+line-height: 33px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 1px 1px, -1px -1px 2px blue;
+  animation: 3s show ease;
+}
+
+.block-play-again {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.button-go-toLobby-again {
+  font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+      width: 278px;
+      height: 46px;
+      left: 0px;
+      top: 193px;
+      border: none;
+
+      border-radius: 6px;
+      color: white;
+      transition: transform .2s;
+      cursor: pointer;
+background: #580EA2;
+animation: 3s show ease;
+}
+
+.button-go-toLobby-again:hover {
+  cursor: pointer;
+}
+
+.enemy-message {
+  margin-bottom: 20px;
+  font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 150%;
+animation: 3s show ease;
+}
+
+.heading-win,
+.heading-lose {
+  text-shadow: 1px 1px, -1px -1px 2px blue;
+  text-align: center;
+
+}
+
+.name-of-winner {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
